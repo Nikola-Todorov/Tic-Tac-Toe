@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "Finger Paint";
+  src: url("FingerPaint-Regular.ttf") format("woff2");
+}
+
+body {
+  font-family: "Finger Paint", cursive;
+  text-align: center;
+  background-image: url(wooden-background2.jpg);
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.scoreboard {
+  float: left;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+table {
+  width: 320px;
+  margin: 20px auto;
+  margin-top: -20px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.cell:hover {
+  background-color: grey;
+}
+
+.endgame {
+  display: none;
+  width: 170px;
+  background-color: #3498db; /* Blue color */
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 200px;
+  right: 300px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#mode-selection {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#mode-selection label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#mode-selection button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+#mode-selection button:hover {
+  background-color: #45a049;
+}
+
+#titlee {
+  font-size: 40px;
+  margin-right: 160px;
+}
+
+body.dark-mode .cell .x,
+body.dark-mode .cell .o {
+  color: black !important;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+#dark-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #4caf50;
+  color: #fff3e0;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#dark-mode-toggle:hover {
+  background-color: #45a049;
+}
+#turn-info {
+  float: left;
+  font-size: 24px;
+  margin-left: 20px;
+  margin-top: 20px;
+  animation: slideIn 4s ease-in-out;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 
+  za telefoni 
+*/
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .scoreboard {
+    float: none;
+    margin: 10px 0;
+  }
+
+  table {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .cell {
+    width: 30px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .endgame {
+    width: 50%;
+    right: 20%;
+  }
+
+  #mode-selection {
+    margin-top: 10px;
+  }
+
+  #titlee {
+    font-size: 30px;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  #turn-info {
+    float: none;
+    font-size: 14px;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+}

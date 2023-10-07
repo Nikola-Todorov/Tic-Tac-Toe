@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body class="clearfix">
+    <div class="scoreboard">
+      <div id="player-x-wins" style="display: none">Player X Wins: 0</div>
+      <div id="player-o-wins" style="display: none">Player O Wins: 0</div>
+    </div>
+
+    <h1 id="titlee">TIC TAC TOE</h1>
+
+    <table>
+      <tr>
+        <td class="cell" id="0"></td>
+        <td class="cell" id="1"></td>
+        <td class="cell" id="2"></td>
+      </tr>
+      <tr>
+        <td class="cell" id="3"></td>
+        <td class="cell" id="4"></td>
+        <td class="cell" id="5"></td>
+      </tr>
+      <tr>
+        <td class="cell" id="6"></td>
+        <td class="cell" id="7"></td>
+        <td class="cell" id="8"></td>
+      </tr>
+    </table>
+
+    <div class="endgame">
+      <div class="text"></div>
+    </div>
+
+    <div id="mode-selection">
+      <h3>Game mode:</h3>
+      <label>
+        <input type="radio" name="game-mode" value="human" checked /> Play
+        Against Human
+      </label>
+      <label>
+        <input type="radio" name="game-mode" value="ai" /> Play Against AI
+      </label>
+      <button class="restartt" onclick="startGame()">Restart</button>
+    </div>
+    <div id="turn-info">Player X's Turn</div>
+
+    <audio id="xSound" src="check_sound.mp3"></audio>
+    <audio id="oSound" src="pop_up.mp3"></audio>
+    <audio id="winSound" src="game_over.wav"></audio>
+    <audio id="tieSound" src="tie_game.wav"></audio>
+    <audio id="restartSound" src="click_button.mp3"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
